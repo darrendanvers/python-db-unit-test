@@ -9,7 +9,7 @@ def main():
     Prints the number of records in the test_table table.
     :return: void
     """
-    with psycopg.connect(host='localhost', dbname='python_db_unit_test', user='postgres',
+    with psycopg.connect(host='localhost', dbname='python-test-db-local', user=os.environ['DB_USER'],
                          password=os.environ['DB_PASSWORD']) as conn:
         print(db_func(conn))
 
